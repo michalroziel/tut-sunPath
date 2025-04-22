@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    testParseSunposition();
+
+
     //convertCoordination();
 
 });
@@ -47,7 +50,7 @@ function testParseSunposition(){
             console.log(c);
 
         } catch (e) {
-            console.error(e.message);
+            console.error(e);
         }
     }
 

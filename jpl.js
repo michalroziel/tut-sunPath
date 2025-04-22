@@ -10,8 +10,8 @@ export function convertCoordination(){
 
 export function parseSunposition( {azi, alt } ){
 
-    const azimuth = Number.parseFloat(azi);
-    const altitude = Number.parseFloat(alt);
+    const azimuth = Number(azi);
+    const altitude = Number(alt);
 
     if (Number.isNaN(azimuth) || Number.isNaN(altitude) ){
 
