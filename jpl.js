@@ -1,11 +1,22 @@
 
-export function convertCoordination(){
+
+export function convertCoordination(  { azimuth, altitude }  ){
+
 
     const toRad = (degree) => degree * Math.PI / 180;
-
     const toDeg = (rad) => rad * 180 / Math.PI;
 
-    console.log("Hello World");
+    const convertedAzi = toRad(90-azimuth);
+    const convertedAlt = toRad(altitude);
+
+    const s = Math.cos(convertedAlt)
+    const y =  s *  Math.sin(convertedAzi);
+
+    const x =  s *  Math.cos(convertedAzi);
+
+
+    return {   x  ,   y   }
+
 }
 
 export function parseSunposition( {azi, alt } ){
