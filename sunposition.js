@@ -30,3 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+function testParseSunposition(){
+
+    const data = [
+        {azi: "-90"  , alt: "45" },
+        {azi: "0" alt: "0.0"},
+        {azi: "5,78", alt: "45-6"}
+    ];
+
+    for (const p of data){
+
+        try{
+            const c = parseSunposition(p);
+            console.log(c);
+
+        } catch (e) {
+            console.error(e.message);
+        }
+    }
+
+
+}
