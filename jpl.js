@@ -20,7 +20,8 @@ export function parseSunposition(azi, alt){
 
     return {
 
-        azimuth, altitude
+        // literale objekt zurückgeben
+        altitude, azimuth
 
     };
 
