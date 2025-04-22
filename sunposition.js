@@ -3,7 +3,7 @@ import {convertCoordination, parseSunposition} from "./jpl.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-
+    convertCoordination();
 
 
     const okBtn = document.getElementById("ok");
@@ -12,10 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const azimuth = document.getElementById("azimuth").value;
         const alititude = document.getElementById("altitude").value;
+
+        const coordinate = parseSunposition( { azi :azimuth, alt : alititude  });
+
+
         console.log({azimuth, alititude});
 
 
-        const coordinate = parseSunposition(azimuth, alititude);
+
+
         console.log(coordinate);
 
     });

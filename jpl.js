@@ -5,9 +5,10 @@ export function convertCoordination(){
 
     const toDeg = (rad) => rad * 180 / Math.PI;
 
+    console.log("Hello World");
 }
 
-export function parseSunposition(azi, alt){
+export function parseSunposition( {azi, alt } ){
 
     const azimuth = Number.parseFloat(azi);
     const altitude = Number.parseFloat(alt);
