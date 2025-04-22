@@ -1,4 +1,4 @@
-import {convertCoordination} from "./jpl.js";
+import {convertCoordination, parseSunposition} from "./jpl.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,13 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const alititude = document.getElementById("altitude").value;
         console.log({azimuth, alititude});
 
-        const v  = {azimuth, alititude};
 
-        const u = {
-            "azimuth" : azimuth,
-            "altitude": alititude,
-        }
-
+        const coordinate = parseSunposition(azimuth, alititude);
+        console.log(coordinate);
 
     });
 
